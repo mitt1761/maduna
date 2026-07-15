@@ -25,7 +25,7 @@ async ()=>{
         const response =
         await fetch(
 
-        "http://localhost:5000/api/forgot-password",
+        "https://maduna-zdw5.vercel.app/api/forgot-password",
 
         {
 
