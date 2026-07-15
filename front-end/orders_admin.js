@@ -27,7 +27,7 @@ let allOrders = [];
 async function loadOrders(){
     try{
         const token = localStorage.getItem("token");
-        const response = await fetch("http://localhost:5000/api/admin/orders", {
+        const response = await fetch("https://maduna-zdw5.vercel.app/api/admin/orders", {
             headers:{ Authorization: `Bearer ${token}` }
         });
 
@@ -146,7 +146,7 @@ document
                 .getItem("token");
 
             await fetch(
-                `http://localhost:5000/api/admin/orders/${orderIdInput.value}`,
+                `https://maduna-zdw5.vercel.app/api/admin/orders/${orderIdInput.value}`,
                 {
                     method:"PUT",
 
@@ -182,7 +182,7 @@ document
                 }).then(async (result) => {
                     if(result.isConfirmed) {
                         const token = localStorage.getItem("token");
-                        await fetch(`http://localhost:5000/api/admin/orders/${id}/cancel`, {
+                        await fetch(`https://maduna-zdw5.vercel.app/api/admin/orders/${id}/cancel`, {
                             method:"PUT",
                             headers:{ Authorization: `Bearer ${token}` }
                         });
