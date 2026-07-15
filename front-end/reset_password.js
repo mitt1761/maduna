@@ -52,7 +52,7 @@ try{
 const response =
 await fetch(
 
-"http://localhost:5000/api/reset-password",
+"https://maduna-zdw5.vercel.app/api/reset-password",
 
 {
 
