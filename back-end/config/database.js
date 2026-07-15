@@ -1,6 +1,8 @@
+require('dotenv').config();
+
 const mysql = require('mysql2');
 
-const connection = mysql.createConnection({
+const db = mysql.createConnection({
     host: process.env.DB_HOST,
     port: process.env.DB_PORT,
     user: process.env.DB_USER,
@@ -11,12 +13,12 @@ const connection = mysql.createConnection({
     }
 });
 
-connection.connect((err) => {
+db.connect((err) => {
     if (err) {
-        console.error('Koneksi gagal:', err);
+        console.error('Gagal terhubung ke database:', err);
     } else {
-        console.log('MySQL Aiven Connected');
+        console.log('Berhasil terhubung ke database Aiven!');
     }
 });
 
-module.exports = connection;
+module.exports = db;
