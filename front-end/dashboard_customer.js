@@ -70,7 +70,7 @@ async function loadProducts() {
 
         const response =
             await fetch(
-                "http://localhost:5000/api/products"
+                "https://maduna-zdw5.vercel.app/api/products"
             );
 
         const products =
@@ -340,7 +340,7 @@ async function checkoutWA() {
         };
         const response =
             await fetch(
-                "http://localhost:5000/api/orders",
+                "https://maduna-zdw5.vercel.app/api/orders",
                 {
                     method: "POST",
                     headers: {
@@ -454,7 +454,7 @@ async function renderHistory() {
     }
 
     try {
-        const response = await fetch(`http://localhost:5000/api/orders/history/${USER_ID}`, {
+        const response = await fetch(`https://maduna-zdw5.vercel.app/api/orders/history/${USER_ID}`, {
             headers: {
                 Authorization: `Bearer ${token}`
             }
