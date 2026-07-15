@@ -9,7 +9,7 @@ let allComments = [];
 
 async function loadComments(){
     try{
-        const response = await fetch("http://localhost:5000/api/comments", {
+        const response = await fetch("http://maduna-zdw5.vercel.app", {
             headers:{ Authorization: `Bearer ${token}` }
         });
 
