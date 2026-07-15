@@ -18,7 +18,7 @@ let allUsers = [];
 async function loadUsers(){
     try{
         const token = localStorage.getItem("token");
-        const response = await fetch("http://localhost:5000/api/admin/users", {
+        const response = await fetch("https://maduna-zdw5.vercel.app/api/admin/users", {
             headers:{ Authorization: `Bearer ${token}` }
         });
 
@@ -167,7 +167,7 @@ document
             ).value;
 
         await fetch(
-            `http://localhost:5000/api/admin/users/${id}`,
+            `https://maduna-zdw5.vercel.app/api/admin/users/${id}`,
             {
                 method:"PUT",
 
@@ -219,7 +219,7 @@ window.deleteUser = async function(id){
     }).then(async (result) => {
         if(result.isConfirmed) {
             const token = localStorage.getItem("token");
-            await fetch(`http://localhost:5000/api/admin/users/${id}`, {
+            await fetch(`https://maduna-zdw5.vercel.app/api/admin/users/${id}`, {
                 method:"DELETE",
                 headers:{ Authorization: `Bearer ${token}` }
             });
