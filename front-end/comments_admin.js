@@ -9,7 +9,7 @@ let allComments = [];
 
 async function loadComments(){
     try{
-        const response = await fetch("http://maduna-zdw5.vercel.app", {
+        const response = await fetch("https://maduna-zdw5.vercel.app/api/comments", {
             headers:{ Authorization: `Bearer ${token}` }
         });
 
@@ -87,7 +87,7 @@ window.deleteComment = async function(id){
     }).then(async (result) => {
         if(result.isConfirmed) {
             try{
-                await fetch(`http://localhost:5000/api/comments/${id}`, {
+                await fetch(`https://maduna-zdw5.vercel.app/api/comments/${id}`, {
                     method:"DELETE",
                     headers:{ Authorization: `Bearer ${token}` }
                 });
