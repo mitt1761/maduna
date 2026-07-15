@@ -11,7 +11,7 @@ async function loadUsers() {
 
         const response =
             await fetch(
-                "http://localhost:5000/api/admin/users",
+                "https://maduna-zdw5.vercel.app/api/admin/users",
                 {
                     headers: {
                         Authorization:
@@ -52,7 +52,7 @@ async function loadOrders() {
 
         const response =
             await fetch(
-                "http://localhost:5000/api/admin/orders",
+                "https://maduna-zdw5.vercel.app/api/admin/orders",
                 {
                     headers: {
                         Authorization:
@@ -212,7 +212,7 @@ async function loadProduct() {
 
         const response =
             await fetch(
-                "http://localhost:5000/api/products"
+                "https://maduna-zdw5.vercel.app/api/products"
             );
 
         const products =
@@ -264,7 +264,7 @@ if (downloadReportBtn) {
     downloadReportBtn.addEventListener("click", async () => {
         try {
             const token = localStorage.getItem("token");
-            const response = await fetch("http://localhost:5000/api/admin/orders", {
+            const response = await fetch("https://maduna-zdw5.vercel.app/api/admin/orders", {
                 headers: {
                     Authorization: `Bearer ${token}`
                 }
