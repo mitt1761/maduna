@@ -18,8 +18,12 @@ app.get('/', (req, res) => {
 const apiRoutes = require('./routes/api');
 app.use('/api', apiRoutes);
 
-const PORT = process.env.PORT || 5000;
+module.exports = app;
 
-app.listen(PORT, () => {
-    console.log(`Server API berjalan di port ${PORT}`);
-});
+if (require.main === module) {
+    const PORT = process.env.PORT || 5000;
+
+    app.listen(PORT, () => {
+        console.log(`Server API berjalan di port ${PORT}`);
+    });
+}
