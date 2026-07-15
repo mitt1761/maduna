@@ -8,7 +8,7 @@ let allProducts = [];
 
 async function loadProducts() {
     try {
-        const response = await fetch("http://localhost:5000/api/products");
+        const response = await fetch("https://maduna-zdw5.vercel.app/api/products");
         allProducts = await response.json();
         
         document.getElementById("totalProducts").textContent = allProducts.length;
@@ -201,7 +201,7 @@ if (saveBtn) {
     saveBtn.addEventListener("click", async () => {
         const id = document.getElementById("editId").value;
         const isNewProduct = id === "";
-        const url = isNewProduct ? "http://localhost:5000/api/products" : `http://localhost:5000/api/products/${id}`;
+        const url = isNewProduct ? "https://maduna-zdw5.vercel.app/api/products" : `https://maduna-zdw5.vercel.app/api/products/${id}`;
         const method = isNewProduct ? "POST" : "PUT";
 
         try {
@@ -251,7 +251,7 @@ window.deleteProduct = async function(id){
     }).then(async (result) => {
         if(result.isConfirmed) {
             try{
-                const response = await fetch(`http://localhost:5000/api/products/${id}`, {
+                const response = await fetch(`https://maduna-zdw5.vercel.app/api/products/${id}`, {
                     method:"DELETE",
                     headers:{ Authorization: `Bearer ${token}` }
                 });
