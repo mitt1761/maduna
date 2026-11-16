@@ -3,18 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Maduna - Madu Hutan Asli Latimojong | 100% Murni</title>
-    
-    <meta name="description" content="Maduna - Madu Hutan Asli Pegunungan Latimojong. 100% murni alami tanpa bahan pengawet atau gula tambahan dari lebah liar Apis Dorsata.">
-    <meta name="keywords" content="Madu Asli, Madu Hutan, Maduna, Madu Latimojong, Apis Dorsata, Madu Murni, Madu Alami">
-    
-    <!-- Open Graph / Facebook / WhatsApp -->
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Maduna - Madu Hutan Asli Latimojong | 100% Murni">
-    <meta property="og:description" content="Dipanen langsung murni dari hutan pegunungan Latimojong tanpa polusi. Pilihan produk kesehatan alami untuk Anda.">
-    <meta property="og:image" content="./assets/bg-maduna.png">
-    
-    <link rel="icon" type="image/png" href="./assets/ikon-madu.png">
+    <title>Maduna - Madu Hutan Asli Latimojong</title>
     
     <!-- Design System CSS -->
     <link rel="stylesheet" href="style.css">
@@ -72,7 +61,7 @@
                     <h1 class="hero-title">100% MURNI <br>Dari Alam</h1>
                 </div>
                 <div class="hero-animate-3">
-                    <p class="hero-desc">Dipanen langsung murni dari hutan pegunungan Latimojong tanpa polusi. Pilihan produk kesehatan alami untuk gaya hidup sehat Anda.</p>
+                    <p class="hero-desc">Dipanen langsung murni dari hutan wilayah kaki pegunungan Latimojong tanpa polusi. Pilihan produk kesehatan alami untuk gaya hidup sehat Anda.</p>
                 </div>
                 <div class="hero-btn-group hero-animate-4">
                     <a href="../frontend/login.html" class="btn btn-accent hero-btn-primary">Beli Sekarang</a>
@@ -100,7 +89,7 @@
             <div class="text-center">
                 <span class="section-tag">Kualitas Terbaik</span>
                 <h2 class="section-title">Mengapa Maduna?</h2>
-                <p class="section-desc">Dipanen langsung dari wilayah kaki Gunung Latimojong, menghadirkan madu hutan asli dari kawasan alam yang masih terjaga dan kaya akan sumber nektar murni.</p>
+                <p class="section-desc">Dipanen langsung dari kaki Gunung Latimojong, menghadirkan madu hutan asli dari kawasan alam yang masih terjaga dan kaya akan sumber nektar murni.</p>
             </div>
             
             <div class="feature-grid">
@@ -354,7 +343,7 @@
             <div class="cta-banner">
                 <div class="cta-content">
                     <h2>Nikmati Madu Hutan Asli Setiap Hari</h2>
-                    <p>Pesan Maduna sekarang dan rasakan kemurnian madu hutan langsung dari Pegunungan Latimojong.</p>
+                    <p>Pesan Maduna sekarang dan rasakan kemurnian madu hutan langsung dari wilayah kaki Pegunungan Latimojong.</p>
                     <ul class="cta-features">
                         <li><i class="fas fa-check-circle"></i> 100% Murni Tanpa Gula Tambahan</li>
                         <li><i class="fas fa-check-circle"></i> Dipanen dari Hutan Tanpa Polusi</li>
@@ -364,7 +353,7 @@
                 </div>
                 <div class="cta-price">
                     <h4>Mulai Dari</h4>
-                    <h2 style="color:white; font-size:2.5rem;">Rp. 90.000</h2>
+                    <h2 style="color:white; font-size:2.5rem;">Rp. 75.000</h2>
                     <p style="color:rgba(255,255,255,0.8);">/Botol 250ml</p>
                 </div>
             </div>
@@ -646,8 +635,7 @@
         const commentMessage = document.getElementById('commentMessage');
         const commentsList = null; // Dihapus karena tidak dipakai lagi
         const submitBtn = document.getElementById('submitCommentBtn');
-        const API_HOST = "https://maduna-backend.vercel.app";
-        const API_URL = `${API_HOST}/api/comments`; // Mengarah ke backend Express
+        const API_URL = 'http://localhost:5000/api/comments'; // Mengarah ke backend Express di port 5000
 
         // Fungsi mekanisme rotasi data independen
         function startDataRotation() {
